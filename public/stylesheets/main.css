@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    padding: 24px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.input_label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input, button{
+    border: 1px solid grey;
+    border-radius: 8px;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 0px 16px;
+    width: 100%;
+    font-size: 14px;
+    height: 48px;
+}
+
+button {
+    color: white;
+    opacity: 0.5;
+    background-color: blue;
+}
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<h1>Crypto Ape</h1>
+
+<form action="/details">
+  <input type="text" name="coin_search" placeholder="Search...">
+</form> 
+
+<% if logged_in? %>
+  <h3>Welcome to Crypto Ape <%= current_user['first_name'] %></h3>
+
+  <form action="/sessions" method="POST">
+    <input type="hidden" name="_method" value="delete">
+    <button>Logout</button>
+  </form>
+
+  <a href="/coins/new">Add your coin</a>
+
+  <% coin_items.each do |coin| %>
+    <h2><%= coin['name'] %></h2>
+    <img src="<%= coin['image_url'] %>" alt="">
+    <a href="/coins/<%= coin['id'] %>/edit">Edit</a>
+
+    <form action="/coins/<%= coin['id'] %>" method="POST">
+      <input type="hidden" name="_method" value="delete">
+
+      <button>Delete</button>
+    </form>
+  <% end %>
+
+<% else %>
+
+  <a href="/sign_up">Sign up</a>
+  <a href="/login">Login</a>
+<% end %>
+
