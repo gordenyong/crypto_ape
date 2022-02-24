@@ -1,3 +1,47 @@
-<% coin_data.each do |coin|%>
+<h2><%= name %> (<%= symbol %>) </h2>
 
-<% end %>
+<div class="main">
+    <h2>$<%= price %></h2>
+
+    <h3  id="percent"><%= one_day_percent_change %>%</h3>
+</div>
+
+<section>
+    <div class="data-1">
+        <span >Market Cap:</span>
+        <span class="real-data">$<%= market_cap %></span>
+    </div>
+
+    <div class="data-1">
+        <span >Circulating supply:</span>
+        <span class="real-data"><%= supply %></span>
+    </div>
+
+    <div class="data-1">
+        <span >Max supply:</span>
+        <span class="real-data"><%= max_supply %></span>
+    </div>
+
+    <div class="data-1">
+        <span >Volume(24hr):</span>
+        <span class="real-data"><%= one_day_volume %></span>
+    </div> 
+</section>
+
+<form action="/coins" method="POST">
+    <input type="hidden" name="name" value="<%= name %>">
+    <input type="hidden" name="symbol" value="<%= symbol %>">
+
+    <button>Add to watchlist</button>
+</form>
+
+<footer>
+    <a class="home" href="/">home</a>
+</footer>
+
+
+
+<link rel="stylesheet" href="/stylesheets/coin_data.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">

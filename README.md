@@ -9,3 +9,6 @@ This project allows users to search for their favourite cryptocurrencies or even
 ## Lessons you learned
 
 ## Features to add in the future
+
+
+coincap api

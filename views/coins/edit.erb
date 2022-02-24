@@ -1,13 +1,12 @@
-<h1>Edit coin</h1>
+<h1>Update/Add image</h1>
 
 <form action="/coin/<%= coin['id'] %>" method="POST">
     <input type="hidden" name="_method" value="put">
     
-    <label for="">Name</label>
-    <input type="text" name="name" value="<%= coin['name'] %>">
-
     <label for="">Image URL</label>
     <input type="text" name="image_url" value="<%= coin['image_url'] %>">
 
-    <button>Update coin</button>
+    <button>Update/Add image</button>
 </form>
+
+<a href="/">home</a>

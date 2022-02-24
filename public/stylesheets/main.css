@@ -1,48 +1,186 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #20B2AA;
+    margin: 0;
+    min-width: 300px;
+}
+
+.header {
+    max-width: 1800px;
+    margin: 0px auto;
+    display: flex;
+    align-items: stretch;
+    padding: 0px 20px;
+    box-sizing: content-box;
+    background-color: darkslategray;
+}
+
 h1 {
+    color: white;
+}
+
+.log-sign-btn {
+    display: flex;
+    padding: 15px 0px;
+    flex: 2 1 0%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1.5 0 0%;
+}
+
+.login-btn, .sign_up-btn {
+    padding: 7px 14px;
+    text-decoration: none;
+    border: 1px white;
+    border-radius: 8px;
+    font-size: smaller;
+    align-items: center;
+}
+
+.sign_up-btn {
+    background-color: #2e8b57;
+    color: white;
+}
+
+.sign_up-btn:hover {
+    background-color: #20B2AA;
+}
+
+.login-btn {
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: gray;
+}
+
+#search_bar {
+    background-color: lightgray;
+    padding: 10px 15px;
+    border-radius: 6px;
+    width: 350%;
+    position: relative;
+    margin: auto 0;
+    border: white;
+}
+
+.intro {
+    font-size: 60px;
+    
+}
+
+.guide {
+    font-size: 30px;
+}
+
+section {
+    padding-top: 120px;
+    padding-bottom: 180px;
+    margin-left: 20px;
     text-align: center;
 }
 
-.form {
+.log-out {
+    max-width: 1800px;
+    margin: 0px auto;
     display: flex;
-    flex-direction: column;
-    max-width: 480px;
-    padding: 24px;
-    margin: 0 auto;
-    border: 1px solid black;
+    align-items: stretch;
+    padding: 0px 20px;
+    box-sizing: content-box;
 }
 
-.input_label {
+#log-out-btn {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 14px;
-}
-
-label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-input, button{
-    border: 1px solid grey;
+    margin-top: 17px;
+    margin-left: 10px;
+    padding: 7px 14px;
+    text-decoration: none;
+    border: 1px white;
     border-radius: 8px;
-    box-sizing: border-box;
-    max-width: 100%;
-    padding: 0px 16px;
-    width: 100%;
-    font-size: 14px;
-    height: 48px;
+    font-size: smaller;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
-button {
+#log-out-btn:hover {
+    background-color: lightgray;
+}
+
+.search_bar {
+    background-color: antiquewhite;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: white;
+    width: 70%;
+}
+
+.logged-search {
+    margin-left: 20px;
+    margin-bottom: 50px ;
+    text-align: center;
+}
+
+.watchlist-coin {
+    margin: 0px 30px;
+    border: 1px solid #20B2AA;
+    border-radius: 8px;
+    background-color: antiquewhite;
+}
+
+.watchlist {
+    text-align: center;
+    font-size: larger;
+    text-decoration: underline;
+}
+
+.watchlist-coin {
+    padding: 20px 20px;
+}
+
+.edit, .details {
+    padding: 7px 14px;
+    text-decoration: none;
+    border: 1px black;
+    border-radius: 8px;
+    font-size: smaller;
+    background-color: darkorange;
     color: white;
-    opacity: 0.5;
-    background-color: blue;
 }
 
+.edit {
+    background-color: cyan;
+    color: black;
+}
 
+.edit:hover {
+    background-color: lightblue;
+}
 
+.details:hover {
+    background-color: lightsalmon;
+}
+
+.delete {
+    margin-top: 10px;
+    padding: 7px 14px;
+    text-decoration: none;
+    border: 1px darkred;
+    border-radius: 8px;
+    font-size: smaller;
+    background-color: darkred;
+    color: white;
+
+}
+
+.delete:hover {
+    background-color: red;
+}
 
 
 

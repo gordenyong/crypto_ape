@@ -1,34 +1,75 @@
-<h1>Crypto Ape</h1>
-
-<form action="/details">
-  <input type="text" name="coin_search" placeholder="Search...">
-</form> 
-
 <% if logged_in? %>
-  <h3>Welcome to Crypto Ape <%= current_user['first_name'] %></h3>
-
-  <form action="/sessions" method="POST">
-    <input type="hidden" name="_method" value="delete">
-    <button>Logout</button>
-  </form>
-
-  <a href="/coins/new">Add your coin</a>
-
-  <% coin_items.each do |coin| %>
-    <h2><%= coin['name'] %></h2>
-    <img src="<%= coin['image_url'] %>" alt="">
-    <a href="/coins/<%= coin['id'] %>/edit">Edit</a>
-
-    <form action="/coins/<%= coin['id'] %>" method="POST">
-      <input type="hidden" name="_method" value="delete">
-
-      <button>Delete</button>
+  <div class="log-out">
+    <h3 class="log-out-display">Logged in as <%= current_user['first_name'] %></h3>
+      
+    <form action="/sessions" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button id="log-out-btn">Logout</button>
     </form>
-  <% end %>
+  </div>
+
+  <div class="logged-search">
+    <form action="/details" id="search">
+     <input class="search_bar" type="text" name="coin_search" placeholder="Search...">
+    </form> 
+  </div>
+
+  <p class="watchlist">Watchlist</p>
+
+  <div class="watchlist-coin">
+    <% coin_items.each do |coin| %>
+      <p>Name: <%= coin['name'] %></p>
+      <p>Symbol: <%= coin['symbol'] %></p>
+      <img src="<%= coin['image_url'] %>" alt="">
+      
+      <a class="edit" href="/coins/<%= coin['id'] %>/edit">Edit</a>
+      <a class="details" href="/details?coin_search=<%= coin['name'] %>">View details</a>
+
+      <form action="/coins/<%= coin['id'] %>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button class="delete">Delete</button>
+      </form>
+    <% end %>
+  </div>
 
 <% else %>
+<div class="header">
+  <div class="title">
+    <h1>Crypto Ape</h1>
+  </div>
 
-  <a href="/sign_up">Sign up</a>
-  <a href="/login">Login</a>
+  <div class="search">
+    <form action="/details" id="search">
+     <input id="search_bar" type="text" name="coin_search" placeholder="Search...">
+    </form> 
+  </div>
+
+  <div class=log-sign-btn>
+  <a class="sign_up-btn" href="/sign_up">Sign up</a>
+  <a class="login-btn" href="/login">Login</a>
+  </div>
+</div>
+
+<section>
+
+  <div class="intro">
+    <p>Discover today cryptocurrency prices instantly.</p>
+  </div>
+
+  <div class="guide">
+    <p>Type coin name/symbol to search for your favourite coin</p>
+    <p>Log in/sign up to add your favourite coins into your watchlist</p>
+  </div>
+
+</section>
+
 <% end %>
+
+
+
+<link rel="stylesheet" href="/stylesheets/main.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
