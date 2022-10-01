@@ -1,5 +1,5 @@
 # Crypto Ape 
-This project allows users to search for their favourite cryptocurrencies or even add them into their watchlist. Cryptocurrency data like market cap, price, volume will be shown when its searched in the search bar. However, the user must log in in order to add the specific coin into their watchlist. Also, if the user decided not to sign up/ log in, they are also allowed to use the search function to search for their cryptocurrencies. [Crypto Ape App](https://fierce-scrubland-43731.herokuapp.com/)
+This project allows users to search for their favourite cryptocurrencies or even add them into their watchlist. Cryptocurrency data like market cap, price, volume will be shown when its searched in the search bar. However, the user must log in in order to add the specific coin into their watchlist. Also, if the user decided not to sign up/ log in, they are also allowed to use the search function to search for their cryptocurrencies. [Crypto Ape App](https://ruby-crypto-scanner.herokuapp.com/)
 
 ## My plan/ approach
 ### 1. Wireframing
